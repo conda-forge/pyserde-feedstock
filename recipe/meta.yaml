@@ -1,5 +1,5 @@
 {% set name = "pyserde" %}
-{% set version = "0.12.5" %}
+{% set version = "0.12.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c759cd49148963014dbc9422236de72dd0e87482220e92d92c4f92ea02201ebe
+  sha256: f1222ea9593eedc484c9e2a7cfa2643936fafde3a54ae7fe4abce4d1b7217451
 
 build:
   noarch: python
