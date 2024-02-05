@@ -1,5 +1,5 @@
 {% set name = "pyserde" %}
-{% set version = "0.13.0" %}
+{% set version = "0.13.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5963beb172d4965132738895742c73ebd3ddeba162e878b050400d16926a0db9
+  sha256: 8d1644f44aa50ce671dce74958a4d2f2bf5db2e96e8965695b4481c9a0b857c3
 
 build:
   noarch: python
@@ -26,8 +26,8 @@ requirements:
     - typing_extensions >=4.1.0
     - casefy
     - jinja2
-    - plum-dispatch >=2,<3
-    
+    - plum-dispatch >=2,<2.3
+
 test:
   imports:
     - serde
