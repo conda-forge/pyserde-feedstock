@@ -34,9 +34,9 @@ test:
     - serde
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
-    - python {{ python_min }}
 
 about:
   home: https://github.com/yukinarit/pyserde
