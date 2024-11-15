@@ -1,13 +1,13 @@
 {% set name = "pyserde" %}
-{% set version = "0.22.0" %}
+{% set version = "0.22.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 196c7376d70cd47d8a3f80a22c581e5a31e91c98d537178b8852fb3cfeb15a71
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: dadb50563286b06a147e6792a845e0f9d58afdc04249c10379066aad5b6f9058
 
 build:
   noarch: python
@@ -16,17 +16,17 @@ build:
 
 requirements:
   host:
-    - python >=3.9.0,<4.0.0
+    - python {{ python_min }}
     - pip
     - poetry-core >=1.0.0
     - poetry-dynamic-versioning
   run:
-    - python >=3.9.0,<4.0.0
+    - python >={{ python_min }}
     - typing_inspect >=0.4.0
     - typing_extensions >=4.1.0
     - casefy
     - jinja2
-    - plum-dispatch >=2,<2.3
+    - plum-dispatch >=2.3
     - beartype >=0.18.4
 
 test:
@@ -34,6 +34,7 @@ test:
     - serde
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
