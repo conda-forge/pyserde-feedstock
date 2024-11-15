@@ -1,4 +1,3 @@
-{% set python_min = python_min|default("0.1a0") %}
 {% set name = "pyserde" %}
 {% set version = "0.22.1" %}
 
@@ -17,7 +16,7 @@ build:
 
 requirements:
   host:
-    - python {{ python_min }}.*
+    - python {{ python_min }}
     - pip
     - poetry-core >=1.0.0
     - poetry-dynamic-versioning
@@ -37,7 +36,7 @@ test:
     - pip
   commands:
     - pip check
-    - python ={{ python_min }}
+    - python {{ python_min }}
 
 about:
   home: https://github.com/yukinarit/pyserde
