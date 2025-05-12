@@ -37,7 +37,7 @@ tests:
       imports:
         - serde
       pip_check: true
-      python_version: python ${{ python_min }}.*
+      python_version: ${{ python_min }}.*
 
 about:
   summary: Serialization library on top of dataclasses
