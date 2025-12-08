@@ -21,8 +21,8 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - poetry-core >=1.0.0
-    - poetry-dynamic-versioning
+    - hatchling >=1.26
+    - hatch-vcs
   run:
     - python >=${{ python_min }}
     - typing_inspect >=0.4.0
