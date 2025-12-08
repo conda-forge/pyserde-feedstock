@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pyserde
-  version: "0.25.1"
+  version: "0.26.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 302a534e91d548a74722bfe1577f497ed3fd87790ac9bd4503985279622e0cd0
+  sha256: e22b52625ee92663102ef706033df27b7a931231f5c99fae31d8b94e8c6fd687
 
 build:
   number: 0
@@ -21,8 +21,8 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - poetry-core >=1.0.0
-    - poetry-dynamic-versioning
+    - hatchling >=1.26
+    - hatch-vcs
   run:
     - python >=${{ python_min }}
     - typing_inspect >=0.4.0
