@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pyserde
-  version: "0.31.0"
+  version: "0.31.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: a804723994c44fcb513804aa63007e001904a59d75f45fb60b3f47176c9a0cbb
+  sha256: c0edb7ee62e1008c48a52f13cd5701574bdd8351105c48d84f35a51ae0ba6619
 
 build:
   number: 0
@@ -37,7 +37,9 @@ tests:
       imports:
         - serde
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: Serialization library on top of dataclasses
