@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pyserde
-  version: "0.31.1"
+  version: "0.31.2"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: c0edb7ee62e1008c48a52f13cd5701574bdd8351105c48d84f35a51ae0ba6619
+  sha256: 3ec19498cbd7df40f187565482a40f97bcbd382eba9f7cf2cb29d9b39f6e8ac6
 
 build:
   number: 0
