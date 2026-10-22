@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pyserde
-  version: "0.33.1"
+  version: "0.34.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 42523c6468e04cdffbe5272960852ac4f3fb5e978e2654e0875f9a243ec010ef
+  sha256: 2b909f38adb201ecaecb1b66eb6c93f830ce4f92752daf16d684aec463a02ca8
 
 build:
   number: 0
@@ -25,7 +25,7 @@ requirements:
     - hatch-vcs
   run:
     - python >=${{ python_min }}
-    - typing_extensions >=4.13.0,<4.17.0
+    - typing_extensions <4.17.0,>=4.13.0
     - casefy
     - jinja2
     - plum-dispatch >=2.3
